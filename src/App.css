@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 колонки по 100 пикселей */
+  grid-template-rows: repeat(4, 100px); /* 4 строки по 100 пикселей */
+  gap: 10px; /* Отступы между плитками */
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #3498db; /* Цвет плитки */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.tile.open {
+  background-color: #2ecc71; /* Цвет открытой плитки */
+  cursor: default; /* Убираем указатель для открытой плитки */
+  transform: scale(1.1); /* Увеличиваем плитку для эффектности */
+}
+
+.tile.closed {
+  background-color: #3498db; /* Цвет закрытой плитки */
+}
+
+/* Эффекты при наведении на плитку */
+.tile:hover {
+  background-color: #2980b9;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e74c3c; /* Цвет кнопки сброса */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #c0392b; /* Темнее цвет кнопки при наведении */
+}
